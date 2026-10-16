@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en" data-title-en="Tags - Mingyuan Zhong" data-title-zh="标签 - Mingyuan Zhong">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tags - Mingyuan Zhong</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=Noto+Serif+SC:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/style.css">
+    <script src="/assets/lang.js"></script>
+    <script src="/assets/data.js" defer></script>
+    <script src="/assets/posts.js" defer></script>
+</head>
+<body>
+    <nav class="site-nav">
+        <div class="links">
+            <a href="/"><span lang="en">Home</span><span lang="zh">首页</span></a>
+            <a href="/techblogs/"><span lang="en">Tech Blogs</span><span lang="zh">技术博客</span></a>
+            <a href="/thoughts/"><span lang="en">Thoughts</span><span lang="zh">随想</span></a>
+            <a href="/tags/" aria-current="page"><span lang="en">Tags</span><span lang="zh">标签</span></a>
+        </div>
+        <button type="button" class="lang-toggle">中文</button>
+    </nav>
+
+    <header class="page-hero">
+        <span class="eyebrow"><span lang="en">Index</span><span lang="zh">索引</span></span>
+        <h1><span lang="en">Tags</span><span lang="zh">标签</span></h1>
+        <p class="lede"><span lang="en">Browse Tech Blogs and Thoughts by topic.</span><span lang="zh">按主题浏览技术博客与随想。</span></p>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2><span lang="en">All tags</span><span lang="zh">全部标签</span></h2>
+            <div data-tag-cloud>
+                <div class="placeholder"><span lang="en">No tags yet</span><span lang="zh">暂无标签</span></div>
+            </div>
+            <p class="active-tag" data-active-tag hidden>
+                <span lang="en">Posts tagged</span><span lang="zh">标签</span>
+                <span class="name"></span>
+                <a href="/tags/"><span lang="en">Clear</span><span lang="zh">清除</span></a>
+            </p>
+            <div data-posts="all"></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Mingyuan Zhong. All rights reserved.</p>
+    </footer>
+</body>
+</html>

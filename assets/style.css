@@ -232,6 +232,8 @@ footer p { margin: 0; }
     border-radius: 999px;
     padding: 0.3rem 0.85rem;
     cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
     box-shadow: var(--shadow);
     transition: border-color 0.15s ease, color 0.15s ease;
 }
@@ -239,6 +241,14 @@ footer p { margin: 0; }
 .lang-toggle:hover {
     color: var(--accent);
     border-color: var(--accent);
+}
+
+@media (max-width: 480px) {
+    .site-nav { padding: 0.6rem 0.75rem; gap: 0.5rem; }
+    .site-nav .links { gap: 0; }
+    .site-nav .links { flex-wrap: nowrap; }
+    .site-nav a { padding: 0.35rem 0.45rem; font-size: 0.84rem; white-space: nowrap; }
+    .lang-toggle { padding: 0.3rem 0.65rem; }
 }
 
 /* ---------- Bilingual content ---------- */
@@ -298,8 +308,6 @@ h1[lang="zh"], h2[lang="zh"], h1 [lang="zh"], h2 [lang="zh"] {
     border: 1px solid var(--border);
     border-radius: 12px;
     box-shadow: var(--shadow);
-    color: inherit;
-    text-decoration: none;
     transition: transform 0.15s ease, border-color 0.15s ease;
 }
 
@@ -336,3 +344,84 @@ h1[lang="zh"], h2[lang="zh"], h1 [lang="zh"], h2 [lang="zh"] {
 }
 
 .placeholder [lang="zh"] { font-style: normal; } /* CJK has no true italic */
+
+/* ---------- Tags ---------- */
+
+.tag-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0 0 1.25rem;
+}
+
+.tag-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--muted);
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.tag-chip:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.tag-chip.is-active {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--accent-soft);
+}
+
+.tag-chip .count {
+    font-size: 0.75rem;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+}
+
+.post-card h3 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.post-card h3 a:hover { color: var(--accent); }
+
+.post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+}
+
+.post-tags .tag {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.post-tags .tag:hover { text-decoration: underline; }
+
+.active-tag {
+    margin: 2.5rem 0 1rem;
+    font-size: 1.1rem;
+    color: var(--muted);
+}
+
+.active-tag .name {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.active-tag a {
+    margin-left: 0.75rem;
+    font-size: 0.875rem;
+    color: var(--muted);
+}

@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=Noto+Serif+SC:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/style.css">
     <script src="/assets/lang.js"></script>
+    <script src="/assets/data.js" defer></script>
+    <script src="/assets/posts.js" defer></script>
 </head>
 <body>
     <nav class="site-nav">
@@ -16,6 +18,7 @@
             <a href="/"><span lang="en">Home</span><span lang="zh">首页</span></a>
             <a href="/techblogs/"><span lang="en">Tech Blogs</span><span lang="zh">技术博客</span></a>
             <a href="/thoughts/" aria-current="page"><span lang="en">Thoughts</span><span lang="zh">随想</span></a>
+            <a href="/tags/"><span lang="en">Tags</span><span lang="zh">标签</span></a>
         </div>
         <button type="button" class="lang-toggle">中文</button>
     </nav>
@@ -29,21 +32,8 @@
     <div class="container">
         <section>
             <h2><span lang="en">Entries</span><span lang="zh">随想列表</span></h2>
-            <!--
-                To add a post, replace the placeholder below with a list like:
-
-                <ul class="posts">
-                    <li>
-                        <a class="post-card" href="/thoughts/my-first-post.html">
-                            <time datetime="2026-10-15">2026-10-15</time>
-                            <h3><span lang="en">English title</span><span lang="zh">中文标题</span></h3>
-                            <p><span lang="en">One-line summary.</span><span lang="zh">一句话简介。</span></p>
-                        </a>
-                    </li>
-                </ul>
-            -->
-            <div class="placeholder">
-                <span lang="en">To be updated</span><span lang="zh">待更新</span>
+            <div data-posts="thoughts">
+                <div class="placeholder"><span lang="en">To be updated</span><span lang="zh">待更新</span></div>
             </div>
         </section>
     </div>
